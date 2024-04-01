@@ -1,0 +1,23 @@
+var dataNascimento = prompt("Digite sua data de nascimento (dd/mm/aaaa):");
+
+var partesData = dataNascimento.split("/");
+var diaNascimento = parseInt(partesData[0]);
+var mesNascimento = parseInt(partesData[1]);
+var anoNascimento = parseInt(partesData[2]);
+
+var dataAtual = new Date();
+var diaAtual = dataAtual.getDate();
+var mesAtual = dataAtual.getMonth() + 1;
+var anoAtual = dataAtual.getFullYear();
+
+var idade = anoAtual - anoNascimento;
+if (mesAtual < mesNascimento || (mesAtual == mesNascimento && diaAtual < diaNascimento)) {
+    idade--;
+}
+
+console.log("Sua idade é:", idade);
+if (idade >= 18) {
+    console.log("Você é maior de idade.");
+} else {
+    console.log("Você é menor de idade.");
+}
