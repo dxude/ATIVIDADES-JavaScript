@@ -1,0 +1,15 @@
+function verificarNota(nota) {
+  return nota >= 0 && nota <= 10;
+}
+
+function pedirNota() {
+  let nota;
+  do {
+    nota = parseFloat(prompt("Digite uma nota entre zero e dez:"));
+    if (!verificarNota(nota)) {
+      alert("Nota inválida. Digite uma nota entre zero e dez.");
+    }
+  } while (!verificarNota(nota));
+  alert("Nota válida: " + nota);
+}
+pedirNota();
