@@ -1,0 +1,27 @@
+function calcularFatorial(numero) {
+    if (numero === 0 || numero === 1) {
+        return 1;
+    } else {
+        return numero * calcularFatorial(numero - 1);
+    }
+}
+
+let continuar = true;
+
+while (continuar) {
+    let numero = parseInt(prompt("Digite um número inteiro positivo menor que 16 para calcular o fatorial:"));
+    
+    while (numero < 0 || numero >= 16 || isNaN(numero)) {
+        numero = parseInt(prompt("Número inválido! Digite um número inteiro positivo menor que 16:"));
+    }
+
+    let fatorial = calcularFatorial(numero);
+    console.log(`O fatorial de ${numero} é ${fatorial}`);
+
+    let resposta = prompt("Deseja calcular outro fatorial? (s/n)").toLowerCase();
+    if (resposta !== 's') {
+        continuar = false;
+    }
+}
+
+console.log("Programa encerrado.");
