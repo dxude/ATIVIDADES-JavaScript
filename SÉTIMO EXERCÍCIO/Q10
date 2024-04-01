@@ -1,0 +1,27 @@
+function verificarPrimo(numero) {
+    if (numero <= 1) {
+        return false;
+    }
+    
+    for (let i = 2; i <= Math.sqrt(numero); i++) {
+        if (numero % i === 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+let n = parseInt(prompt("Digite um número inteiro para encontrar todos os primos até esse número:"));
+let divisoes = 0;
+
+console.log(`Números primos entre 1 e ${n}:`);
+
+for (let i = 2; i <= n; i++) {
+    if (verificarPrimo(i)) {
+        console.log(i);
+    }
+    divisoes++;
+}
+
+console.log(`Número de divisões realizadas: ${divisoes}`);
