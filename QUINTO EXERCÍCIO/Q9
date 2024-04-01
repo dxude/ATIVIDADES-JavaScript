@@ -1,0 +1,12 @@
+function decimalParaBinario(numero) {
+  if (!Number.isInteger(numero) || numero < 0) {
+    return "Número inválido. Informe um inteiro positivo.";
+  }
+
+  let binario = numero.toString(2);
+  return binario;
+}
+
+console.log(decimalParaBinario(10)); 
+console.log(decimalParaBinario(20)); 
+console.log(decimalParaBinario(7)); 
