@@ -1,0 +1,17 @@
+function numerosNoIntervaloECalculaSoma(numero1, numero2) {
+    let soma = 0;
+
+    if (numero1 < numero2) {
+        for (let i = numero1; i <= numero2; i++) {
+            console.log(i);
+            soma += i;
+        }
+    } else {
+        for (let i = numero2; i <= numero1; i++) {
+            console.log(i);
+            soma += i;
+        }
+    }
+
+    console.log('A soma dos números no intervalo é:', soma);
+}
