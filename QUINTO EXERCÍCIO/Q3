@@ -1,0 +1,18 @@
+function calcularMedia(numeros) {
+  let soma = 0;
+  for (let i = 0; i < numeros.length; i++) {
+    soma += numeros[i];
+  }
+
+  let media = soma / numeros.length;
+
+  return media;
+}
+
+const conjunto1 = [10, 20, 30, 40, 50];
+const conjunto2 = [5, 7, 9, 11];
+const conjunto3 = [15, 25, 35];
+
+console.log(calcularMedia(conjunto1)); 
+console.log(calcularMedia(conjunto2)); 
+console.log(calcularMedia(conjunto3)); 
