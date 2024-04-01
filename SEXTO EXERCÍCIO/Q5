@@ -1,0 +1,41 @@
+function calcularAnosParaIgualar(populacaoA, taxaCrescimentoA, populacaoB, taxaCrescimentoB) {
+  let anos = 0;
+
+  while (populacaoA <= populacaoB) {
+    populacaoA *= 1 + (taxaCrescimentoA / 100);
+    populacaoB *= 1 + (taxaCrescimentoB / 100);
+    anos++;
+  }
+
+  return anos;
+}
+
+function validarNumeroInput(mensagem) {
+  let numero;
+  do {
+    numero = prompt(mensagem);
+    numero = parseFloat(numero);
+  } while (isNaN(numero) || numero <= 0);
+  return numero;
+}
+
+function validarTaxaInput(mensagem) {
+  let taxa;
+  do {
+    taxa = prompt(mensagem);
+    taxa = parseFloat(taxa);
+  } while (isNaN(taxa) || taxa < 0);
+  return taxa;
+}
+
+do {
+  const populacaoA = validarNumeroInput('Informe a população inicial do país A:');
+  const taxaCrescimentoA = validarTaxaInput('Informe a taxa de crescimento anual do país A (%):');
+  const populacaoB = validarNumeroInput('Informe a população inicial do país B:');
+  const taxaCrescimentoB = validarTaxaInput('Informe a taxa de crescimento anual do país B (%):');
+
+  const anosNecessarios = calcularAnosParaIgualar(populacaoA, taxaCrescimentoA, populacaoB, taxaCrescimentoB);
+  console.log(`Serão necessários ${anosNecessarios} anos para que a população do país A ultrapasse ou iguale a população do país B.`);
+
+  const repetir = confirm('Deseja repetir a operação?');
+} while (repetir);
