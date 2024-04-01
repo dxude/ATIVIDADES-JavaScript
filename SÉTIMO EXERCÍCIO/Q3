@@ -1,0 +1,17 @@
+function fibonacciAteLimite(limite) {
+    let fibonacci = [0, 1];
+    let i = 2;
+
+    while (fibonacci[i - 1] + fibonacci[i - 2] <= limite) {
+        fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+        i++;
+    }
+
+    return fibonacci;
+}
+
+let limite = 500;
+let sequenciaFibonacci = fibonacciAteLimite(limite);
+console.log(`Sequência de Fibonacci até o limite de ${limite}:`);
+console.log(sequenciaFibonacci);
+
