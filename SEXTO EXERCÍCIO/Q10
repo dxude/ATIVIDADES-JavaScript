@@ -1,0 +1,11 @@
+function numerosNoIntervalo(numero1, numero2) {
+    if (numero1 < numero2) {
+        for (let i = numero1; i <= numero2; i++) {
+            console.log(i);
+        }
+    } else {
+        for (let i = numero2; i <= numero1; i++) {
+            console.log(i);
+        }
+    }
+}
