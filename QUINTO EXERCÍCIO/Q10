@@ -1,0 +1,17 @@
+function calcularFatorial(numero) {
+  if (!Number.isInteger(numero) || numero < 0) {
+    return "Número inválido. Informe um inteiro positivo.";
+  }
+  if (numero === 0 || numero === 1) {
+    return 1;
+  }
+
+  let fatorial = 1;
+  for (let i = 2; i <= numero; i++) {
+    fatorial *= i;
+  }
+  return fatorial;
+}
+console.log(calcularFatorial(5)); 
+console.log(calcularFatorial(0)); 
+console.log(calcularFatorial(10)); 
