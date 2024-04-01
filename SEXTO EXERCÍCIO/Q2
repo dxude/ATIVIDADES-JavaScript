@@ -1,0 +1,15 @@
+function solicitarCredenciais() {
+  let nomeUsuario, senha;
+
+  do {
+    nomeUsuario = prompt("Digite seu nome de usuário:");
+    senha = prompt("Digite sua senha:");
+
+    if (senha === nomeUsuario) {
+      alert("Erro: A senha não pode ser igual ao nome de usuário. Tente novamente.");
+    }
+  } while (senha === nomeUsuario);
+
+  alert("Credenciais cadastradas com sucesso!");
+}
+solicitarCredenciais();
