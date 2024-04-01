@@ -1,0 +1,7 @@
+var v1 = Number(prompt("Digite o primeiro número:"));
+var v2 = Number(prompt("Digite o segundo número:"));
+var v3 = Number(prompt("Digite o terceiro número:"));
+console.log("Os números digitados são:");
+console.log(v1);
+console.log(v2);
+console.log(v3);
