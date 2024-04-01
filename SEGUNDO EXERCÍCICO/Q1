@@ -1,0 +1,19 @@
+var peso = parseFloat(prompt("Digite seu peso em kg:"));
+var altura = parseFloat(prompt("Digite sua altura em metros:"));
+
+var imc = peso / (altura * altura);
+
+console.log("Seu IMC é:", imc);
+if (imc < 18.5) {
+    console.log("Categoria: Abaixo do peso");
+} else if (imc >= 18.5 && imc <= 24.9) {
+    console.log("Categoria: Peso normal");
+} else if (imc >= 25.0 && imc <= 29.9) {
+    console.log("Categoria: Excesso de peso");
+} else if (imc >= 30.0 && imc <= 34.9) {
+    console.log("Categoria: Obesidade grau I");
+} else if (imc >= 35.0 && imc <= 39.9) {
+    console.log("Categoria: Obesidade grau II");
+} else {
+    console.log("Categoria: Obesidade grau III");
+}
