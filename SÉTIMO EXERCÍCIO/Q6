@@ -1,0 +1,30 @@
+function encontrarMenorValor(array) {
+    return Math.min(...array);
+}
+
+function encontrarMaiorValor(array) {
+    return Math.max(...array);
+}
+
+function calcularSomaValores(array) {
+    return array.reduce((total, numero) => total + numero, 0);
+}
+
+let numeros = [];
+let quantidadeNumeros = parseInt(prompt("Digite a quantidade de números:"));
+
+for (let i = 0; i < quantidadeNumeros; i++) {
+    let numero = parseFloat(prompt(`Digite o ${i + 1}º número:`));
+    while (numero < 0 || numero > 1000) {
+        numero = parseFloat(prompt("Número inválido! Digite um número entre 0 e 1000:"));
+    }
+    numeros.push(numero);
+}
+
+let menorValor = encontrarMenorValor(numeros);
+let maiorValor = encontrarMaiorValor(numeros);
+let somaValores = calcularSomaValores(numeros);
+
+console.log(`Menor valor: ${menorValor}`);
+console.log(`Maior valor: ${maiorValor}`);
+console.log(`Soma dos valores: ${somaValores}`);
