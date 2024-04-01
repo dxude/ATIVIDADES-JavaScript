@@ -1,0 +1,7 @@
+function converterParaCaixaAlta(str) {
+  return str.toUpperCase();
+}
+
+console.log(converterParaCaixaAlta("Olá, mundo!")); 
+console.log(converterParaCaixaAlta("JavaScript é incrível")); 
+console.log(converterParaCaixaAlta("hello world")); 
