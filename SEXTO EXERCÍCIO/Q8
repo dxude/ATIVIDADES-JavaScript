@@ -1,0 +1,12 @@
+let numeros = [];
+
+for (let i = 1; i <= 5; i++) {
+    let numero = parseInt(prompt(`Informe o ${i}º número:`));
+    numeros.push(numero);
+}
+let soma = numeros.reduce((total, num) => total + num, 0);
+
+let media = soma / numeros.length;
+
+console.log(`Soma dos números: ${soma}`);
+console.log(`Média dos números: ${media}`);
