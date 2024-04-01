@@ -1,0 +1,13 @@
+function verificarPalindromo(palavra) {
+  palavra = palavra.toLowerCase().replace(/\s/g, '');
+
+  for (let i = 0; i < palavra.length / 2; i++) {
+    if (palavra[i] !== palavra[palavra.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(verificarPalindromo("arara")); 
+console.log(verificarPalindromo("reconhecer")); 
+console.log(verificarPalindromo("cachorro")); 
