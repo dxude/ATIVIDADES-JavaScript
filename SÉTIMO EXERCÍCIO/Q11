@@ -1,0 +1,18 @@
+function calcularMediaAritmetica(notas) {
+    let soma = 0;
+    for (let nota of notas) {
+        soma += nota;
+    }
+    return soma / notas.length;
+}
+
+let numNotas = parseInt(prompt("Digite a quantidade de notas que deseja inserir:"));
+let notas = [];
+
+for (let i = 0; i < numNotas; i++) {
+    let nota = parseFloat(prompt(`Digite a nota ${i + 1}:`));
+    notas.push(nota);
+}
+
+let media = calcularMediaAritmetica(notas);
+console.log(`A média aritmética das ${numNotas} notas é: ${media}`);
