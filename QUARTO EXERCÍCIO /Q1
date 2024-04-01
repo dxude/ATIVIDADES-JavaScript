@@ -1,0 +1,4 @@
+function exibirMensagemBoasVindas() {
+  alert("Bem-vindo(a) à nossa página!");
+}
+window.onload = exibirMensagemBoasVindas;
