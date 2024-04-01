@@ -1,0 +1,9 @@
+function calcularAcrescimoPorcentagem(valor, porcentagem) {
+  let acrescimo = (valor * porcentagem) / 100;
+  let valorComAcrescimo = valor + acrescimo;
+  return valorComAcrescimo;
+}
+
+console.log(calcularAcrescimoPorcentagem(100, 10));
+console.log(calcularAcrescimoPorcentagem(50, 20)); 
+console.log(calcularAcrescimoPorcentagem(200, 30)); 
