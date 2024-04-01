@@ -1,0 +1,6 @@
+var valorSaque = parseInt(prompt("Digite o valor que deseja sacar (múltiplo de 10):"));
+if (valorSaque % 10 === 0) {
+    console.log("Saque realizado com sucesso.");
+} else {
+    console.log("Valor inválido. Digite um valor múltiplo de 10.");
+}
